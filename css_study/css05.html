@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        :root {
+            font-size: 10px;
+        }
+
+        .box1 {}
+
+        .box1 li:nth-of-type(1) strong {
+            font-size: 16px;
+        }
+
+        .box1 li:nth-of-type(1) span {
+            font-size: 1em;
+        }
+
+        .box1 li:nth-of-type(2) {
+            font-size: 2em;
+            color: red;
+        }
+
+        .box1 li:nth-of-type(2) span {
+            font-size: 0.8em;
+        }
+
+        @media (max-width:600px) {
+            .box1 li:nth-of-type(2) {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+
+    <div class="box1">
+        <ul>
+            <li>
+                <strong>텍스트</strong>
+                <span>텍스트</span>
+            </li>
+            <li>텍스트 <span>텍스트</span></li>
+            <li><span>텍스트</span></li>
+        </ul>
+    </div>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+        }
+
+        /* 웹 모든 요소의 기본 여백들을 제거 */
+
+        .box2 {
+            border: 1px solid red;
+            width: 400px;
+            height: 100px;
+            margin: 10px 20px 30px 40px;
+            padding: 10px 20px 30px 40px;
+            /* box-sizing: border-box; */
+            padding-top: 50px;
+            margin-top: 50px;
+        }
+
+        .box2 p {
+            border: 1px solid blue;
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+
+    <div class="box2">
+        <p>test</p>
+    </div>
+
+    <style>
+        .box3 {
+            border: 1px solid red;
+            padding: 10px
+        }
+
+        .box3 li {
+            border: 1px solid lightblue;
+            margin: 5px 5px 10px;
+            text-align: center;
+        }
+
+        .box3 li:hover {
+            border-top-color: red;
+            border-bottom-style: dotted;
+        }
+    </style>
+    <ul class="box3">
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+    </ul>
+</body>
+
+</html>

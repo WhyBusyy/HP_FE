@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .box1,
+        .box2 {
+            border: 1px solid red;
+            width: 200px;
+            padding: 20px;
+        }
+
+        a.box2 {
+            display: block;
+            outline: none;
+            text-decoration: none;
+        }
+
+        /* .box1:hover {
+            background-color: burlywood;
+            width: 250px;
+        } */
+
+        a.box2:focus {
+            border-width: 5px;
+        }
+
+        a.box2:visited {
+            color: brown;
+        }
+
+        .box3 {
+            display: block;
+            outline: none;
+            border: none;
+        }
+
+        .box3:hover,
+        .box3:focus {
+            background-color: beige;
+        }
+
+        #testLink {
+            background-color: lightcoral;
+            height: 50vh;
+        }
+    </style>
+    <div class="box1">여기에 마우스를 올려보세요.</div>
+    <a href="#testLink" class="box2">링크 요소</a>
+    <input class="box3" type="text" name="" id="">
+    <input class="box3" type="text" name="" id="">
+    <hr style="height: 50vh;">
+    <div id="testLink">아래쪽</div>
+    <hr style="height: 50vh;">
+</body>
+
+</html>

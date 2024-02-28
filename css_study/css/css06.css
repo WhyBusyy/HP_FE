@@ -1,0 +1,46 @@
+body {
+    background-color: beige;
+}
+
+.banner {
+    position: relative;
+    display: block;
+    background-color: #7862bf;
+    width: calc(70% - 32px);
+    height: 150px;
+    margin: 100px auto;
+    border-radius: 16px;
+    color: #fff;
+    text-decoration: none;
+    padding: 32px;
+    top: 0;
+    transition: 0.3s;
+}
+
+.banner>* {
+    display: block;
+}
+
+.banner img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* transform 이미지가 가지고 있는 값을 기준으로 변화 시키는 속성 */
+}
+
+.banner i {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    transition: 0.3s;
+}
+
+.banner:hover {
+    top: -10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.banner:hover i {
+    left: 50px;
+}
