@@ -1,0 +1,134 @@
+@charset 'utf-8';
+
+:root {
+    font-size: 12px;
+}
+
+.wrap {
+    overflow: hidden;
+}
+
+.mw {
+    max-width: 1200px;
+    width: calc(100% - 4rem);
+    margin: auto;
+}
+
+.hd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+}
+
+.hd .logo {
+    padding: 2rem;
+    width: 25rem;
+}
+
+.hd .logo img {
+    width: 100%;
+}
+
+.hd nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hd .gnb {
+    display: flex;
+}
+
+.hd .gnb>li {
+    position: relative;
+}
+
+.hd .gnb>li>a {
+    display: block;
+    white-space: nowrap;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding: 1rem 2rem;
+}
+
+.hd .sub {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+    visibility: hidden;
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: 1s
+}
+
+.hd .gnb li:hover .sub {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hd .sub li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hd .sub a {
+    display: block;
+    width: calc(100% - 2rem);
+    padding: 1rem 0;
+    border-top: 1px solid #a8a8a8;
+}
+
+.hd .sub a:hover {
+    color: #a8a8a8;
+    border-color: #dadada;
+}
+
+.hd .sub .sub-top {
+    border-top: none;
+}
+
+.hd .func {
+    display: flex;
+    margin-left: 2rem;
+}
+
+.hd .func a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    border: 1px solid black;
+    border-radius: 1rem;
+    transition: 0.5s;
+}
+
+.hd .func a:hover {
+    background-color: black;
+    color: white;
+}
+
+.ham {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2.5rem;
+    display: none;
+}
+
+@media(max-width: 1000px) {
+
+    .hd nav,
+    .hd .func {
+        display: none;
+    }
+
+    .ham {
+        display: block;
+    }
+}

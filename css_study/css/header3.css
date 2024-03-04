@@ -1,0 +1,186 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle&display=swap');
+
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    /* font-family: "Dongle", sans-serif; */
+    font-family: 'S-CoreDream-3Light';
+    font-weight: lighter;
+    line-height: 1;
+    /* font: "Dongle", sans-serif 20px / 1 */
+    color: #444;
+}
+
+.wrap {
+    overflow: hidden;
+}
+
+.mw {
+    max-width: 1200px;
+    width: calc(100% - 4rem);
+    margin: auto;
+    border: 1px solid red;
+}
+
+.hd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+}
+
+.hd .logo {
+    padding: 1rem 0;
+    width: 120px;
+}
+
+.hd .logo:hover {
+    opacity: 0.8;
+}
+
+.hd nav::before {
+    content: '여기';
+    background-color: aliceblue;
+    position: absolute;
+    top: 100%;
+    left: -200%;
+    width: 1000%;
+    height: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.hd nav:hover::before {
+    height: 150px;
+    opacity: 1;
+}
+
+.hd .gnb {
+    display: flex;
+}
+
+.hd .gnb a {
+    display: block;
+    white-space: nowrap;
+    font-size: 1.25rem;
+}
+
+.hd .gnb>li:hover>a {
+    color: red;
+    background-color: aliceblue;
+}
+
+.hd .gnb>li {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.hd .gnb>li>a {
+    padding: 1rem 2rem;
+    font-family: "Black Han Sans", sans-serif;
+}
+
+.hd .sub {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    /* display: none; */
+    transition: opacity 0.3s;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.hd .gnb:hover .sub {
+    /* display: block; */
+    opacity: 1;
+    height: 150px;
+}
+
+.hd .sub a {
+    padding: 0.5rem;
+}
+
+.hd .func {
+    display: flex;
+
+}
+
+.hd .func a {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    position: relative;
+    white-space: nowrap;
+}
+
+.hd .func a i {
+    font-size: 0.8em;
+    color: #999;
+    vertical-align: middle;
+}
+
+.hd .func a::before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    /* width: 80%; */
+    width: calc(100% - 2rem);
+    background-color: #999;
+    opacity: 0;
+}
+
+.hd .func a:hover::before {
+    opacity: 1;
+}
+
+/* .box {
+    width: 500px;
+    display: flex;
+}
+
+.box>div {
+    flex-grow: 1;
+    flex-basis: 0;
+    flex: 1; 위 2가지 속성과 동일함
+} */
+
+.ham {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.ham:hover,
+.ham:focus {
+    color: dodgerblue;
+}
+
+@media(max-width: 1000px) {
+
+    .hd nav,
+    .hd .func {
+        display: none;
+    }
+
+    .ham {
+        display: block;
+    }
+}
