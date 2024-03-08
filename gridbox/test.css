@@ -1,0 +1,64 @@
+.wrap {
+    border: 1px solid red;
+    width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 50px;
+    position: relative;
+}
+
+.wrap>* {
+    border: 1px solid aqua;
+}
+
+.wrap header {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.wrap .text1,
+.wrap .text7 {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.wrap .text2 {
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.wrap section {
+    grid-row: span 2;
+}
+
+.wrap .text6 {
+    grid-row: span 4;
+}
+
+.wrap .text9 {
+    position: absolute;
+    background-color: aqua;
+    top: 100px;
+    left: 25%;
+    width: 50%;
+    height: 100px;
+}
+
+footer {
+    grid-column: span 4;
+}
+
+@media(max-width:800px) {
+
+    .wrap {
+        display: block;
+    }
+
+
+    .wrap .text9 {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+}

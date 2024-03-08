@@ -1,0 +1,26 @@
+.con {
+    width: 1000px;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+
+    justify-content: center;
+    /* justify-content: space-between; */
+    /* justify-content: start; */
+    /* align-content: center; */
+    /* align-content: space-between; */
+    align-items: start;
+    /* align-items: center; */
+    /* align-items: end; */
+}
+
+.con>div {
+    width: 50%;
+}
+
+.item1 {
+    /* align-self: stretch; */
+    /* align-self: end; */
+    align-self: center;
+}

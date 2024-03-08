@@ -1,0 +1,19 @@
+.con {
+    display: grid;
+    /* grid-template-columns: minmax(500px, 800px) minmax(500px, 800px); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+    grid-auto-rows: 100px;
+}
+
+.item1 {
+    order: 1;
+}
+
+.item2 {
+    order: 3;
+}
+
+.item6 {
+    order: 0;
+}

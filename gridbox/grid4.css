@@ -1,0 +1,18 @@
+.con {
+    display: grid;
+    /* grid-template-columns */
+    /* grid-template-rows */
+    /* grid-auto-flow */
+
+    /* grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px; */
+    /* grid: row 영역 / column 영역 */
+
+    /* grid-auto-flow: row; */
+}
+
+.item1 {}
+
+.item2 {}
+
+.item3 {}
